@@ -263,7 +263,27 @@ int ce103_strlen(const char* fiStr)
 char* ce103_strcat(char* fiDest, char* fiSrc)
 {
 	//TODO:Start from Here...
-	return 0;
+
+	char* start = fiDest;
+	//
+	while (*fiDest != '\0')
+	{
+		//fiDest is incremented by one
+		fiDest++;
+	}
+	//When the fiSrc pointer is not equal to '\0', the fiDest pointer is set to the fiSrc pointer, and fiDest and fiSrc are incremented one by one
+	while (*fiSrc != '\0')
+	{
+		//fiDest pointer is set to the fiSrc pointer
+		*fiDest = *fiSrc;
+		//fiDest is incremented by one
+		fiDest++;
+		//fiStr is incremented by one
+		fiSrc++;
+	}
+
+	*fiDest = '\0';
+	return start;
 }
 
 /**
