@@ -147,7 +147,20 @@ int fnCE103HW2Lib(unsigned char* fia, int fib, char* fic)
 int ce103_fibonacciNumber(int fiIndex)
 {
 	//TODO:Start from Here...
-	return -1;
+
+		//The first two variables of the Fibonacci number are created
+	int first = 0, second = 1, third;
+	//The loop variable is assigned and the loop variable is incremented by one at the end of each operation
+	for (int i = 1; i < fiIndex; i++)
+	{
+		//The first and second value are summed and reassigned to the third value
+		third = first + second;
+		//The second number replaces the first value.
+		first = second;
+		//The third number replaces the second value
+		second = third;
+	}
+	return first;
 }
 
 /**
