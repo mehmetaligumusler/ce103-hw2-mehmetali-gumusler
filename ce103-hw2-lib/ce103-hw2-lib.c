@@ -358,7 +358,10 @@ int ce103_strcmp(const char* fiLhs, const char* fiRhs)
 char* ce103_strcpy(char* foDestination, const char* fiSource)
 {
 	//TODO:Start from Here...
-	return 0;
+	char* ret = foDestination;
+	//Increment the foDestination and fiSource pointers one by one and make them equal to each other, while not equal to '\0' we are returning to the reject pointer
+	while ((*foDestination++ = *fiSource++) != '\0');
+	return ret;
 }
 
 /**
