@@ -554,23 +554,39 @@ void ce103_bin2hex(unsigned char* fiBin, int fiBinLen, char* foHex)
 int ce103_gcd(int fiNum1, int fiNum2)
 {
 	//TODO:Start from Here...
-	int i, gcd;
-	//Required variables defined
-
-	if (fiNum1 != fiNum2)
+//Here I create an if structure to find the largest value
+	if (fiNum1 < fiNum2)
 	{
-
-		for (i = 1; i <= fiNum1 && i <= fiNum2; ++i)
+		//Here I create an for loop to find the largest common divisior 
+		for (int i = fiNum2; i <= fiNum2; i--)
 		{
-			if (fiNum1 % i == 0 && fiNum2 % i == 0)
-				gcd = i;
+			if (fiNum1 % i == 0 & fiNum2 % i == 0)
+			{
+				return i;
+			}
+
 		}
+
+
 	}
-	else
+	//I added the else if struct because values can be equal
+	else if (fiNum1 == fiNum2)
 	{
 		return fiNum1;
-		//It is done to ensure that the function returns if the 2 received data are equal to each other.
 	}
-	return 1;
+	//This function tests the last remaining probability
+	else
+	{
+		for (int i = fiNum1; i <= fiNum1; i--)
+		{
+			if (fiNum1 % i == 0 & fiNum2 % i == 0)
+			{
+				return i;
+			}
+
+		}
+
+	}
+	return -1;
 
 }
