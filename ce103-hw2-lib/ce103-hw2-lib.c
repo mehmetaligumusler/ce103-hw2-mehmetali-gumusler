@@ -284,6 +284,22 @@ char* ce103_strcat(char* fiDest, char* fiSrc)
 
 	*fiDest = '\0';
 	return start;
+
+	/*
+		{
+			char* ret = fiDest;
+			//finding the length of the string
+			while (fiDest++ != '\0');
+			--fiDest;
+
+			//combines destand srcand do this until the combine words and returns a copy test
+			while ((fiDest++ == *fiSrc++) != '\0');
+
+			return ret;
+		}
+
+		;
+		*/
 }
 
 /**
