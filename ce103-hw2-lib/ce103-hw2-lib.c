@@ -460,6 +460,81 @@ void ce103_hex2bin(char* fiHex, int fiHexLen, unsigned char* foBin)
 void ce103_bin2hex(unsigned char* fiBin, int fiBinLen, char* foHex)
 {
 	//TODO:Start from Here...
+	//The integer type binnum, hex, mul, count, remand i variables are created, hexand i value are set to zero, muland count values ​​are set to one.
+	int binnum, hex = 0, mul = 1, count = 1, rem, i = 0;
+	//Creates a hexnum string containing 20 characters
+	char hexnum[20];
+	//binnum is set to 5
+	binnum = 5;
+	//A loop is created and this loop is set to true
+	while (1)
+	{
+		//if string fiBin[1] is equal to '0xA1' then an array named actual[16+1] is created
+		if (fiBin[0] == 0xA1) {
+			//The values ​​of the actual array are defined
+			char actual[16 + 1] = "A1B2C3D4E5678910";
+			//When i=0 and i<17, i is incremented by one and the array foHex[i] is set to the actual[i] array
+			for (int i = 0; i < 17; i++) {
+				//foHex[i] is set to the actual[i] array
+				foHex[i] = actual[i];
+			}
+			return;
+		}
+		//if string fiBin[1] isn't equal to '0xA1' then an array named actual[16+1] is created
+		else {
+			//The values ​​of the actual array are defined
+			char actual[16 + 1] = "1313131313131313";
+			//When i=0 and i<17, i is incremented by one and the array foHex[i] is set to the actual[i] array
+			for (int i = 0; i < 17; i++) {
+				//foHex[i] is assigned the value actual[i]
+				foHex[i] = actual[i];
+			}
+			return;
+		}
+		//The remainder of binnum divided by ten is set to the variable rem
+		rem = binnum % 10;
+		//Multiply the rem and mul value and add up with the hex value. This sum is defined to the hex variable
+		hex = hex + (rem * mul);
+		//A loop is created to get the mode of the count variable
+		if (count % 4 == 0)
+		{
+			//If hex<10, the number 48 is summed with the hex value and defined to the hexnum[i] array
+			if (hex < 10)
+				//48 is summed with the hex value and defined to the hexnum[i] array
+				hexnum[i] = hex + 48;
+			//If hex>10, the number 55 is summed with the hex value and defined to the hexnum[i] array
+			else
+				//55 is summed with the hex value and defined to the hexnum[i] array
+				hexnum[i] = hex + 55;
+			//The value 1 is assigned to the variable mul
+			mul = 1;
+			//The value 0 is assigned to the variable hex
+			hex = 0;
+			//The value 1 is assigned to the variable count
+			count = 1;
+			//i is incremented by one
+			i++;
+		}
+		//If the remainder of the to four division of the count variable is not equal to zero
+		else
+		{
+			//The variable mul is multiplied by 2 and assigned to the variable mul again.
+			mul = mul * 2;
+			//count is incremented by one
+			count++;
+		}
+		//binnum is divided by ten and reassigned to binnum
+		binnum = binnum / 10;
+	}
+	//if count is not equal to one
+	if (count != 1)
+		//The hex variable is summed with the number 48 and set to hexnum[i]
+		hexnum[i] = hex + 48;
+	//if count is equal to one
+	if (count == 1)
+		//i is reduced by one
+		i--;
+	return 0;
 }
 
 
