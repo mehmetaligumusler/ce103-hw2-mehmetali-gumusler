@@ -1,6 +1,6 @@
 SET GRAPHVIZ_DOT="C:\Program Files\Graphviz\bin\dot.exe"
 SET DOXYGEN_EXE="C:\Program Files\doxygen\bin\doxygen.exe"
-SET SOURCE_DIR=..\ce103-hw2-lib
+SET SOURCE_DIR=..\ce103-hw2-2022-2023-mehmetali-gumusler
 SET DOC_IMG_PATH_UML=..\doxygen\Resources
 SET DOC_IMG_PATH=../doxygen/Resources
 :: SET STRIP_PATH="C:xx"
