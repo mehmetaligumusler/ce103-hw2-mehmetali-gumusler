@@ -1,3 +1,6 @@
-# CE103 HW-2 template without function body
+# CE103, Homework 2
 
-Please check homework guide to complete this task
+- Mehmet Ali GUMUSLER, (mehmetali_gumusler21@erdogan.edu.tr), [@mehmetaligumusler](https://github.com/mehmetaligumusler)
+
+Instructor: 
+- Ugur CORUH, [@ucoruh](https://github.com/ucoruh) 
