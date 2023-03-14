@@ -4,3 +4,9 @@
 
 Instructor: 
 - Ugur CORUH, [@ucoruh](https://github.com/ucoruh) 
+
+## About
+
+Algorithms and Programming I - HW2 
+
+Some functions in C Language.
