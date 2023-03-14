@@ -7,6 +7,4 @@ Instructor:
 
 ## About
 
-Algorithms and Programming I - HW2 
-
 Some functions in C Language.
